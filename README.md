@@ -3,6 +3,8 @@
 ## Overview
 This project showcases a method for estimating the volume of a ***horizontally*** aligned cylinder using a 3D point cloud. The project utilizes Python, Open3D, and HDBSCAN to efficiently process point cloud data. It segments the data based on height, applies clustering techniques, and accurately calculates the volume of the point cloud cylinder.
 
+The volume result should be printed in the console, and the cylinder visualization should be opened.
+
 
 ## Prerequisites
 - Python 3.8-3.11 (Python 3.12 not supported)
@@ -41,7 +43,7 @@ python volume_exercise_1.py
 
 - Doing the volume calculation just based on height and histogram data was not conclusive enough as there could be outliers that are not the cylinder.
 
-- Looked up clustering algorithms, tried DBSCAN. DBSCAN took too much memory even after downsampling (almost 20gb of memory!)
+- Looked up clustering algorithms, tried DBSCAN. DBSCAN took too much memory even after voxel downsampling (almost 20gb of memory!)
 
 - Instead went with HBDSCAN (doesnt require distance matrix to be stored in memory - much faster, less than 250mb of memory)
 
