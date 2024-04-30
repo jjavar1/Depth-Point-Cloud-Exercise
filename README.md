@@ -18,12 +18,14 @@ Clone and install the required packages using pip:
 git clone https://github.com/jjavar1/DepthPointCloud.git
 cd depthpointcloud
 pip install -r requirements.txt
+```
 
 ## Installation
 To run:
 
 ```bash
 pythoin volume_exercise_1.py
+```
 
 ## Methodology:
 1. Height Segmentation: Filters the point cloud to only include points within a specific height range.
