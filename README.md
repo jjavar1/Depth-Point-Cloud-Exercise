@@ -34,7 +34,7 @@ python volume_exercise_1.py
 3. Volume Calculation: Estimates the volume of the detected cylinder based on geometric properties extracted from the cluster.
 
 ## Thoughts and Pitfalls
-# Thoughts
+### Thoughts
 -First checked if the npy had color information in its coordinates, upon inspection it was just an array of the points and the z,y,z coordinates.
 
 -The height information is embedded in the npy.
@@ -49,7 +49,7 @@ python volume_exercise_1.py
 
 -After filtering, the cluster data only pointed to the cylinder.
 
-# Pitfalls
+### Pitfalls
 1. This assumes the cylinder orientaion and position. If it varies to much accross datasets, the segmentation might miss it or incorrectly segment another object.
 
 2. HDBSCAN params need to be fine tuned (density, distribution, noise level). May result in over/under segmentation.
