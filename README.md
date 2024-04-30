@@ -5,6 +5,8 @@ This project showcases a method for estimating the volume of a ***horizontally**
 
 The volume result should be printed in the console, and the cylinder visualization should be opened.
 
+**Note: the output will only show after closing the visualization window, this is to adhere to the method requirements**
+
 
 ## Prerequisites
 - Python 3.8-3.11 (Python 3.12 not supported)
