@@ -14,7 +14,7 @@ This project showcases a method for estimating the volume of a ***horizontally**
 Clone and install the required packages using pip:
 
 ```bash
-git clone https://github.com/jjavar1/DepthPointCloud.git
+git clone https://github.com/jjavar1/Depth-Point-Cloud-Exercise.git
 cd depthpointcloud
 pip install -r requirements.txt
 ```
