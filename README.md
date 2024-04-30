@@ -30,6 +30,12 @@ To run:
 python volume_exercise_1.py
 ```
 
+To test:
+
+```bash
+python volume_exercise_test.py
+```
+
 ## Methodology:
 1. Height Segmentation: Filters the point cloud to only include points within a specific height range.
 
