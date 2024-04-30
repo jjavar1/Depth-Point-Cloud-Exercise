@@ -35,27 +35,27 @@ python volume_exercise_1.py
 
 ## Thoughts and Pitfalls
 ### Thoughts
--First checked if the npy had color information in its coordinates, upon inspection it was just an array of the points and the z,y,z coordinates.
+- First checked if the npy had color information in its coordinates, upon inspection it was just an array of the points and the z,y,z coordinates.
 
--The height information is embedded in the npy.
+- The height information is embedded in the npy.
 
--Doing the volume calculation just based on height and histogram data was not conclusive enough as there could be outliers that are not the cylinder.
+- Doing the volume calculation just based on height and histogram data was not conclusive enough as there could be outliers that are not the cylinder.
 
--Looked up clustering algorithms, tried DBSCAN. DBSCAN took too much memory even after downsampling (almost 20gb of memory!)
+- Looked up clustering algorithms, tried DBSCAN. DBSCAN took too much memory even after downsampling (almost 20gb of memory!)
 
--Instead went with HBDSCAN (doesnt require distance matrix to be stored in memory - much faster, less than 250mb of memory)
+- Instead went with HBDSCAN (doesnt require distance matrix to be stored in memory - much faster, less than 250mb of memory)
 
--Since the clustering algorithm would just cluster the floor (since the points are in a large cluster), I used the histogram points of the max/minumum height data.
+- Since the clustering algorithm would just cluster the floor (since the points are in a large cluster), I used the histogram points of the max/minumum height data.
 
--After filtering, the cluster data only pointed to the cylinder.
+- After filtering, the cluster data only pointed to the cylinder.
 
 ### Pitfalls
-1. This assumes the cylinder orientaion and position. If it varies to much accross datasets, the segmentation might miss it or incorrectly segment another object.
+- This assumes the cylinder orientaion and position. If it varies to much accross datasets, the segmentation might miss it or incorrectly segment another object.
 
-2. HDBSCAN params need to be fine tuned (density, distribution, noise level). May result in over/under segmentation.
+- HDBSCAN params need to be fine tuned (density, distribution, noise level). May result in over/under segmentation.
 
-3. Accuracy is dependant on the quality and density of the point cloud.
+- Accuracy is dependant on the quality and density of the point cloud.
 
-4. Computationally, might be a little too much for what we're trying to do.
+- Computationally, might be a little too much for what we're trying to do.
 
 
