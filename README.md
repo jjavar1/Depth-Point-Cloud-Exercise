@@ -14,10 +14,10 @@ The volume result should be printed in the console, and the cylinder visualizati
 
 ## Installation
 Clone and install the required packages using pip:
+It is highly recommended to use a virtual environment for using this project.
 
 ```bash
 git clone https://github.com/jjavar1/Depth-Point-Cloud-Exercise.git
-cd depthpointcloud
 pip install -r requirements.txt
 ```
 
